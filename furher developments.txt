@@ -1,0 +1,14 @@
+--User Interface Popup: Adding a popup.html and popup.js to provide an interface to allow users to:
+                        enable/disable the feature
+                        monitor downloads 
+                        view a list of currently monitored downloads 
+                        see a log of resumed attempts
+
+--Retry Logic: Implement a more robust retry mechanism for downloads that repeatedly fail to resume
+               (e.g., retry a few times with increasing delays)
+
+--Error Handling
+
+--Notifications: Add chrome.notifications to alert the user when a download is interrupted and successfully resumed, 
+                 or if it fails to resume after multiple attempts.
+
