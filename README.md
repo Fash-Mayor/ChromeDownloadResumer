@@ -1,6 +1,9 @@
 # ChromeDownloadResumer
 A chrome extension that automatically resumes downloads when interrupted.
 
+![GitHub last commit](https://img.shields.io/github/last-commit/Fash-Mayor/ChromeDownloadResumer)
+
+
 This Chrome Extension provides a basic framework for automatically resuming interrupted or paused downloads. It leverages Chrome's downloads API to monitor the state of active downloads.
 
 ## How To Use
@@ -13,4 +16,4 @@ This Chrome Extension provides a basic framework for automatically resuming inte
     - Navigate to and select the `ChromeDownloadResumer` folder you downloaded the files into
 - It should appear now in the list of extensions.
 
-### The extension does not need any special permissions or control. It starts listening for chnges in downloads once it is unpacked.
+### The extension does not need any special permissions or control. It starts listening for changes in downloads once it is unpacked.
