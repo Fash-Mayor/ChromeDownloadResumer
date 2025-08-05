@@ -4,7 +4,7 @@
                         view a list of currently monitored downloads 
                         see a log of resumed attempts
 
---Retry Logic: Implement a more robust retry mechanism for downloads that repeatedly fail to resume
+## Done --Retry Logic: Implement a more robust retry mechanism for downloads that repeatedly fail to resume
                (e.g., retry a few times with increasing delays)
 
 --Error Handling
