@@ -10,7 +10,7 @@ chrome.downloads.onChanged.addListener((downloadDelta) => {
   console.log(`Download ID: ${downloadDelta.id}`);
   console.log('Download Delta:', JSON.stringify(downloadDelta, null, 2));
 
-  // **MODIFIED LOGIC: Use parentheses to ensure correct order of evaluation**
+  // Use parentheses to ensure correct order of evaluation**
   if (downloadDelta.state && (downloadDelta.state.current === 'in_progress' || downloadDelta.state.current === 'complete')) {
     if (retryAttempts.has(downloadDelta.id)) {
       clearTimeout(retryAttempts.get(downloadDelta.id).timeoutId);
@@ -19,7 +19,7 @@ chrome.downloads.onChanged.addListener((downloadDelta) => {
     }
   }
 
-  // **MODIFIED LOGIC START: Use a separate function for the resume attempt**
+  // Use a separate function for the resume attempt**
   const attemptResume = (downloadId) => {
     // Check if we've reached the maximum number of retries
     const attempts = (retryAttempts.has(downloadId) ? retryAttempts.get(downloadId).count : 0) + 1;
@@ -52,7 +52,6 @@ chrome.downloads.onChanged.addListener((downloadDelta) => {
     // Store the timeout ID so we can clear it if the download state changes
     retryAttempts.set(downloadId, { count: attempts, timeoutId });
   };
-  // **MODIFIED LOGIC END**
 
   // Check if the download's state has changed to 'interrupted'
   if (downloadDelta.state && downloadDelta.state.current === 'interrupted') {
@@ -79,7 +78,7 @@ chrome.downloads.onChanged.addListener((downloadDelta) => {
   }
 });
 
-// Optional: Add a listener for when the extension is installed or updated
+// Listener for when the extension is installed or updated
 chrome.runtime.onInstalled.addListener(() => {
   console.log("Auto Download Resumer extension installed or updated.");
 });
